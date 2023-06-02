@@ -16,11 +16,11 @@ const rl = createInterface(process.stdin, process.stdout)
 say('Witty\nBot', {
 font: 'chrome',
 align: 'center',
-gradient: ['red', 'orange']})
+gradient: ['ble', 'cyan']})
 say(`@gabrielacosta_15`, {
 font: 'console',
 align: 'center',
-gradient: ['whitw', 'blue']})
+gradient: ['green', 'yellow']})
 
 var isRunning = false
 /**
