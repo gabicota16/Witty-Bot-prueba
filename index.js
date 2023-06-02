@@ -13,14 +13,14 @@ const { name, author } = require(join(__dirname, './package.json'))
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Gata\nBot\nMD', {
+say('Witty\nBot', {
 font: 'chrome',
 align: 'center',
-gradient: ['red', 'magenta']})
-say(`Por Gata Dios`, {
+gradient: ['red', 'black']})
+say(`@gabrielacosta_15`, {
 font: 'console',
 align: 'center',
-gradient: ['red', 'magenta']})
+gradient: ['rainbow', 'rainbow']})
 
 var isRunning = false
 /**
