@@ -165,7 +165,7 @@ return fileInDir.startsWith('pre-key-') || fileInDir.startsWith('app-') || fileI
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
 DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./GataJadiBot/${directorio}/${fileInDir}`)
+unlinkSync(`./WittyJadiBot/${directorio}/${fileInDir}`)
 })
 }
 })
