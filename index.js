@@ -16,7 +16,7 @@ const rl = createInterface(process.stdin, process.stdout)
 say('Witty\nBot', {
 font: 'chrome',
 align: 'center',
-gradient: ['ble', 'cyan']})
+gradient: ['blue', 'cyan']})
 say(`@gabrielacosta_15`, {
 font: 'console',
 align: 'center',
