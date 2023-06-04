@@ -75,6 +75,7 @@ let emoji = Array.from(lvl.toString()).map((digit) => numberToEmoji[digit] || "�
 
 let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.genero == 'Ocultado 🕶️' ? `🕶️` : user.genero == 'Mujer 🚺' ? `🚺` : user.genero == 'Hombre 🚹' ? `🚹` : '👤'} ${user.registered === true ? user.name : username}*${(conn.user.jid == global.conn.user.jid ? '' : `\n*SOY SUB BOT DE: https://wa.me/${global.conn.user.jid.split`@`[0]}*`) || ''}
 
+
 \`\`\`${week}, ${date}\`\`\`
 ⎔ *${lenguajeGB['smsTotalUsers']()}* ➺ _${Object.keys(global.db.data.users).length}_ 
 ⎔ *Registrados »* ${rtotalreg}/${totalreg}
@@ -98,18 +99,17 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 
 ⊜ *Experiencia ➟* ${exp} ⚡
 ⊜ *Diamantes ➟* ${limit} 💎
-⊜ *GataCoins ➟* ${money} 🐈
+⊜ *WittyCoins ➟* ${money} ⚜️
 ⊜ *Tokens ➟* ${joincount} 🪙
 ${readMore}
 *╭━〔 INFORMACIÓN DE GATABOT 〕⬣*
-┃💫➺ _${usedPrefix}cuentasgatabot | cuentasgb_
-┃💫➺ _${usedPrefix}gruposgb | grupos | groupgb_
+┃💫➺ _${usedPrefix}cuentaswittybot | cuentaswb_
 ┃💫➺ _${usedPrefix}donar | donate_
 ┃💫➺ _${usedPrefix}listagrupos | grouplist_
-┃💫➺ _${usedPrefix}estado | heygata | status_
-┃💫➺ _${usedPrefix}infogata | infobot_
+┃💫➺ _${usedPrefix}estado | heywitty | status_
+┃💫➺ _${usedPrefix}infowitty | infobot_
 ┃💫➺ _${usedPrefix}instalarbot | installbot_
-┃💫➺ _${usedPrefix}creadora | owner_
+┃💫➺ _${usedPrefix}creador | owner_
 ┃💫➺ _${usedPrefix}velocidad | ping_
 ┃💫➺ _Bot_ 
 ┃💫➺ _términos y condiciones_
@@ -117,7 +117,7 @@ ${readMore}
 
 *╭━〔 FUNCIÓN SUB BOT 〕━⬣*
 ┃ *Ya puedes convertir tú*
-┃ *Número en GataBot!!*
+┃ *Número en WittyBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃💻 _${usedPrefix}serbot | jadibot_
 ┃💻 _${usedPrefix}bots | listjadibots_
@@ -134,7 +134,7 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━〔 ÚNETE AL GRUPO 〕━⬣*
-┃ *Une a GataBot en Grupos!!*
+┃ *Une a WittyBot en Grupos!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🪅 _${usedPrefix}botemporal *enlace* *cantidad*_
 ┃🪅 _${usedPrefix}addbot *enlace* *cantidad*_
@@ -190,12 +190,9 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━〔 IA 〕━⬣*
-┃ *Tienes la Ocasión de*
-┃ *Conversar con GataBot!!*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃🪄➺ _${usedPrefix}simi | okgoogle *texto*_
-┃🪄➺ _${usedPrefix}alexa | siri | cortana *texto*_
-┃🪄➺ _${usedPrefix}simsimi | bixby *texto*_
+┃🪄➺ _${usedPrefix}simi | bot *texto*_
+┃🪄➺ _${usedPrefix}dalle *texto*_ *crear imágenes*
+┃🪄➺ _${usedPrefix}chatgpt | ia *texto*_
 *╰━━━━━━━━━━━━⬣*
 
 *╭━━━[ AJUSTES - CHATS ]━━━⬣*
@@ -214,7 +211,6 @@ ${readMore}
 ┃⚙️ _${usedPrefix}on *:* off *autosticker*_
 ┃⚙️ _${usedPrefix}on *:* off *reacciones | reaction*_
 ┃⚙️ _${usedPrefix}on *:* off *audios*_
-┃⚙️ _${usedPrefix}on *:* off *modocaliente | modohorny*_
 ┃⚙️ _${usedPrefix}on *:* off *antitoxicos | antitoxic*_
 ┃⚙️ _${usedPrefix}on *:* off *antiver | antiviewonce*_
 ┃⚙️ _${usedPrefix}on *:* off *antieliminar | antidelete*_
@@ -281,7 +277,7 @@ ${readMore}
 *╰━━━━━━━━━━━━⬣*
 
 *╭━[ CONFIGURACIÓN - GRUPOS ]━⬣*
-┃ *Mejora tú Grupo con GataBot!!*
+┃ *Mejora tú Grupo con WittyBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🌐➺ _${usedPrefix}add *numero*_
 ┃🌐➺ _${usedPrefix}sacar | ban | kick  *@tag*_
@@ -340,12 +336,6 @@ ${readMore}
 ┃📧➺ _${usedPrefix}delvoto | deletevoto_
 *╰━━━━━━━━━━━━⬣*
 
-*╭━━━[ CONTENIDO 🔞 ]━━⬣*
-┃ *Visita el Menú de Comandos*
-┃ *Para Adultos!!*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃🔞➺ _${usedPrefix}hornymenu_
-*╰━━━━━━━━━━━━⬣*
 
 *╭━[ CONVERTIDORES 🛰️ ]━⬣*
 ┃ *Convierte sticker en imagen!!*
@@ -435,22 +425,22 @@ ${readMore}
 ┃ *Realiza Modificaciones*
 ┃ *al Audio o Nota de Voz!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃🧰 _${usedPrefix}bass_
-┃🧰 _${usedPrefix}blown_
-┃🧰 _${usedPrefix}deep_
-┃🧰 _${usedPrefix}earrape_
-┃🧰 _${usedPrefix}fast_
-┃🧰 _${usedPrefix}fat_
-┃🧰 _${usedPrefix}nightcore_
-┃🧰 _${usedPrefix}reverse_
-┃🧰 _${usedPrefix}robot_
-┃🧰 _${usedPrefix}slow_
-┃🧰 _${usedPrefix}smooth_
-┃🧰 _${usedPrefix}tupai_
+┃📱 _${usedPrefix}bass_
+┃📱 _${usedPrefix}blown_
+┃📱 _${usedPrefix}deep_
+┃📱 _${usedPrefix}earrape_
+┃📱 _${usedPrefix}fast_
+┃📱 _${usedPrefix}fat_
+┃📱 _${usedPrefix}nightcore_
+┃📱 _${usedPrefix}reverse_
+┃📱 _${usedPrefix}robot_
+┃📱 _${usedPrefix}slow_
+┃📱 _${usedPrefix}smooth_
+┃📱 _${usedPrefix}tupai_
 *╰━━━━━━━━━━━━⬣*
 
 *╭━━[ BÚSQUEDAS 🔍 ]━━⬣*
-┃ *Busca lo que quieres con GataBot!!*
+┃ *Busca lo que quieres con WittyBot!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃🔍➺ _${usedPrefix}animeinfo *texto*_
 ┃🔍➺ _${usedPrefix}mangainfo *texto*_
@@ -515,7 +505,7 @@ ${readMore}
 ┃⚗️➺ _${usedPrefix}myns_
 ┃⚗️➺ _${usedPrefix}unreg *numero de serie*_
 ┃⚗️➺ _${usedPrefix}minardiamantes | minargemas_
-┃⚗️➺ _${usedPrefix}minargatacoins | minarcoins_
+┃⚗️➺ _${usedPrefix}minarwittycoins | minarcoins_
 ┃⚗️➺ _${usedPrefix}minarexperiencia | minarexp_
 ┃⚗️➺ _${usedPrefix}minar *:* minar2 *:* minar3_
 ┃⚗️➺ _${usedPrefix}reclamar | regalo | claim_
@@ -576,34 +566,32 @@ ${readMore}
 *╭━[ MENU PARA PROPIETARIO/A ]━⬣*
 ┃ *Comandos solo para Propietario/a!!*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃💎 _${usedPrefix}join *enlace*_
-┃💎 _${usedPrefix}unete *enlace*_
-┃💎➺ _${usedPrefix}dardiamantes *cantidad*_
-┃💎➺ _${usedPrefix}darxp *cantidad*_
-┃💎➺ _${usedPrefix}dargatacoins *cantidad*_
-┃💎➺ _${usedPrefix}addprem | userpremium *@tag* *cantidad*_
-┃💎➺ _${usedPrefix}addprem2 | userpremium2 *@tag* *cantidad*_
-┃💎➺ _${usedPrefix}addprem3 | userpremium3 *@tag* *cantidad*_
-┃💎➺ _${usedPrefix}addprem4 | userpremium4 *@tag* *cantidad*_
-┃💎➺ _${usedPrefix}idioma | language_
-┃💎➺ _${usedPrefix}cajafuerte_
-┃💎➺ _${usedPrefix}comunicar | broadcastall | bc *texto*_
-┃💎➺ _${usedPrefix}broadcastchats | bcc *texto*_
-┃💎➺ _${usedPrefix}comunicarpv *texto*_
-┃💎➺ _${usedPrefix}broadcastgc *texto*_
-┃💎➺ _${usedPrefix}comunicargrupos *texto*_
-┃💎➺ _${usedPrefix}borrartmp | cleartmp_
-┃💎➺ _${usedPrefix}delexp *@tag*_
-┃💎➺ _${usedPrefix}delgatacoins *@tag*_
-┃💎➺ _${usedPrefix}deldiamantes *@tag*_
-┃💎➺ _${usedPrefix}reiniciar | restart_
-┃💎➺ _${usedPrefix}ctualizar | update_
-┃💎➺ _${usedPrefix}addprem | +prem *@tag*_
-┃💎➺ _${usedPrefix}delprem | -prem *@tag*_
-┃💎➺ _${usedPrefix}listapremium | listprem_
-┃💎➺ _${usedPrefix}añadirdiamantes *@tag cantidad*_
-┃💎➺ _${usedPrefix}añadirxp *@tag cantidad*_
-┃💎➺ _${usedPrefix}añadirgatacoins *@tag cantidad*_
+┃💸➺ _${usedPrefix}join *enlace*_
+┃💸➺ _${usedPrefix}unete *enlace*_
+┃💸➺ _${usedPrefix}dardiamantes *cantidad*_
+┃💸➺ _${usedPrefix}darxp *cantidad*_
+┃💸➺ _${usedPrefix}addprem | userpremium *@tag* *cantidad*_
+┃💸➺ _${usedPrefix}addprem2 | userpremium2 *@tag* *cantidad*_
+┃💸➺ _${usedPrefix}addprem3 | userpremium3 *@tag* *cantidad*_
+┃💸➺ _${usedPrefix}addprem4 | userpremium4 *@tag* *cantidad*_
+┃💸➺ _${usedPrefix}idioma | language_
+┃💸➺ _${usedPrefix}cajafuerte_
+┃💸➺ _${usedPrefix}comunicar | broadcastall | bc *texto*_
+┃💸➺ _${usedPrefix}broadcastchats | bcc *texto*_
+┃💸➺ _${usedPrefix}comunicarpv *texto*_
+┃💸➺ _${usedPrefix}broadcastgc *texto*_
+┃💸➺ _${usedPrefix}comunicargrupos *texto*_
+┃💸➺ _${usedPrefix}borrartmp | cleartmp_
+┃💸➺ _${usedPrefix}delexp *@tag*_
+┃💸➺ _${usedPrefix}delwittycoins *@tag*_
+┃💸➺ _${usedPrefix}deldiamantes *@tag*_
+┃💸➺ _${usedPrefix}reiniciar | restart_
+┃💸➺ _${usedPrefix}actualizar | update_
+┃💸➺ _${usedPrefix}addprem | +prem *@tag*_
+┃💸➺ _${usedPrefix}delprem | -prem *@tag*_
+┃💸➺ _${usedPrefix}listapremium | listprem_
+┃💸➺ _${usedPrefix}añadirdiamantes *@tag cantidad*_
+┃💸➺ _${usedPrefix}añadirwittycoins *@tag cantidad*_
 *╰━━━━━━━━━━━━⬣*`.trim()
 await conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 	
